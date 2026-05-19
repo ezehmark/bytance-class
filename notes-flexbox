@@ -1,0 +1,174 @@
+1. Introduction to Flexbox
+Flexbox is a one-dimensional layout system used to arrange items in rows or columns.
+It helps distribute space and align items efficiently.
+Example:
+<div class="container">
+  <div>Item 1</div>
+  <div>Item 2</div>
+</div>
+
+<style>
+.container {
+  display: flex;
+}
+</style>
+
+
+2. Flex Container Setup
+You enable flexbox using display:flex. This turns the container into a flex container.
+Example:
+<div class="container">
+  <div>Box</div>
+</div>
+
+<style>
+.container {
+  display: flex;
+}
+</style>
+
+
+3. flex-direction
+Controls the direction of items (row, column, etc).
+Example:
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+</div>
+
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+}
+</style>
+
+
+4. justify-content
+Aligns items along the main axis.
+Example:
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+</div>
+
+<style>
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+</style>
+
+
+5. align-items
+Aligns items along the cross axis.
+Example:
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+</div>
+
+<style>
+.container {
+  display: flex;
+  align-items: center;
+  height: 200px;
+}
+</style>
+
+
+6. flex-wrap
+Controls whether items wrap to the next line.
+Example:
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<style>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>
+
+
+7. gap
+Adds spacing between flex items.
+Example:
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+</div>
+
+<style>
+.container {
+  display: flex;
+  gap: 20px;
+}
+</style>
+
+
+8. flex-grow
+Defines how much an item should grow relative to others.
+Example:
+<div class="container">
+  <div class="a">1</div>
+  <div class="b">2</div>
+</div>
+
+<style>
+.container { display: flex; }
+.a { flex-grow: 1; }
+.b { flex-grow: 2; }
+</style>
+
+
+9. flex-shrink
+Defines how items shrink when space is limited.
+Example:
+<style>
+.container { display: flex; }
+.item { flex-shrink: 1; }
+</style>
+
+
+10. flex-basis
+Sets the initial size before space distribution.
+Example:
+<style>
+.container { display: flex; }
+.item { flex-basis: 200px; }
+</style>
+
+
+11. flex shorthand
+Combines grow, shrink, and basis.
+Example:
+<style>
+.item {
+  flex: 1;
+}
+</style>
+
+
+12. align-self
+Overrides alignment for a single item.
+Example:
+<style>
+.item {
+  align-self: flex-end;
+}
+</style>
+
+
+13. order
+Changes the visual order of items.
+Example:
+<style>
+.item1 { order: 2; }
+.item2 { order: 1; }
+</style>
+
+

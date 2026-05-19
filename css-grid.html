@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title style="color: red;">CSS Grid Complete Showcase</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  
+  * {border:gray;gap:4px}
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+  }
+
+  h1 {
+    margin: 0;
+    color: #38bdf8;
+  }
+
+  section {
+    padding: 20px;
+    border-bottom: 1px solid #1e293b;
+  }
+
+  h2 {
+    color: #38bdf8;
+  }
+
+  .container {
+    display: grid;
+    margin-top: 10px;
+  }
+
+.container2 {
+    display: grid;
+    margin-top: 10px;
+    gap:20px;
+    grid-template-rows: 100px 100px;
+  }
+
+  .container2 .box { background: orange; }
+
+  .box {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+
+  /* 1. Intro */
+  .intro .box { background: lightblue; }
+
+  /* 2. Columns */
+  .columns {
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+  .columns .box { background: lightcoral; }
+
+  /* 3. Rows */
+  .rows {
+    grid-template-rows: 100px 200px;
+  }
+  .rows .box { background: lightgreen; }
+
+  /* 4. Gap */
+  .gap {
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+  }
+  .gap .box { background: orange; }
+
+  /* 5. Span */
+  .span {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .span .box { background: pink; }
+  .span .box1 {
+    grid-column: span 2;
+    background: lightblue;
+  }
+
+  /* 6. justify-items & align-items */
+  .align-items {
+    height: 200px;
+    justify-items: center;
+    align-items: center;
+  }
+  .align-items .box {
+    background: purple;
+    color: white;
+  }
+
+  /* 7. justify-content & align-content */
+  .align-content {
+    grid-template-columns: 100px 100px;
+    height: 200px;
+    justify-content: center;
+    align-content: center;
+  }
+  .align-content .box { background: teal; }
+
+  /* 8. auto-fit */
+  .autofit {
+    grid-template-columns: repeat(auto-fit, minmax(50px,1fr));
+    gap: 10px;
+  }
+  .autofit .box { background: skyblue; }
+
+  /* 9. auto-fill */
+  .autofill {
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+    gap: 10px;
+  }
+  .autofill .box { background: salmon; }
+
+  /* 10. Areas */
+  .areas {
+    grid-template-areas:
+      "header header"
+      "sidebar main";
+    gap: 10px;
+  }
+
+  .header { grid-area: header; background: lightblue;padding:10px }
+  .sidebar { grid-area: sidebar; background: rgb(159, 155, 165);padding: 10px; }
+  .main { grid-area: main; background: lightcoral; padding: 10px;}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>CSS Grid Complete Showcase</h1>
+  <p>All 10 concepts combined in one file</p>
+</header>
+
+<section class="intro">
+  <h2>1. Introduction to Grid</h2>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+  </div>
+</section>
+
+<section>
+  <h2>2. grid-template-columns</h2>
+  <div class="container columns">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</section>
+
+<section>
+  <h2>3. grid-template-rows</h2>
+  <div class="container rows">
+    <div class="box">Row1</div>
+    <div class="box">Row2</div>
+  </div>
+</section>
+
+<section>
+  <h2>4. gap</h2>
+  <div class="container2">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</section>
+
+<section>
+  <h2>5. grid-column / grid-row</h2>
+  <div class="container span">
+    <div class="box" style="grid-row: span 2; background: red;">Span 2 cols</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</section>
+
+<section>
+  <h2>6. justify-items & align-items</h2>
+  <div class="container align-items">
+    <div class="box">Centered</div>
+  </div>
+</section>
+
+<section>
+  <h2>7. justify-content & align-content</h2>
+  <div class="container align-content">
+    <div class="box">1</div>
+    <div class="box">2</div>
+  </div>
+</section>
+
+<section>
+  <h2>8. auto-fit + minmax</h2>
+  <div class="container autofit">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+     <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+     <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+     <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</section>
+
+<section>
+  <h2>9. auto-fill</h2>
+  <div class="container autofill">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">4</div>
+     <div class="box">2</div>
+    <div class="box">3</div>
+     <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+     <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+     <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</section>
+
+<section>
+  <h2>10. grid-template-areas</h2>
+  <div class="container areas">
+
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main</div>
+
+    
+  </div>
+</section>
+
+</body>
+</html>

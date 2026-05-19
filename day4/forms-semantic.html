@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 4 - Forms Deep Dive & Semantic HTML</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#f4f6f9;
+      padding:30px;
+      line-height:1.6;
+      color:#333;
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:40px;
+      color:#1e3a8a;
+    }
+
+    h2{
+      color:#2563eb;
+      margin-bottom:15px;
+    }
+
+    .section{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      margin-bottom:30px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .example{
+      margin-top:20px;
+      background:#f8fbff;
+      border:1px solid #dbeafe;
+      border-radius:10px;
+      padding:20px;
+    }
+
+    form{
+      margin-top:20px;
+    }
+
+    input,
+    select,
+    textarea{
+      width:100%;
+      padding:12px;
+      margin-top:10px;
+      margin-bottom:20px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:16px;
+    }
+
+    button{
+      background:#2563eb;
+      color:white;
+      border:none;
+      padding:12px 20px;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:16px;
+    }
+
+    button:hover{
+      background:#1d4ed8;
+    }
+
+    .inline{
+      display:flex;
+      gap:20px;
+      margin-top:10px;
+      margin-bottom:20px;
+    }
+
+    .inline label{
+      display:flex;
+      align-items:center;
+      gap:5px;
+    }
+
+    code{
+      background:#e5e7eb;
+      padding:2px 6px;
+      border-radius:4px;
+    }
+
+    /* Semantic Layout Styling */
+
+    header{
+      background:#2563eb;
+      color:white;
+      padding:20px;
+      border-radius:10px;
+      margin-bottom:20px;
+    }
+
+    nav{
+      margin-top:10px;
+    }
+
+    nav a{
+      color:white;
+      margin-right:15px;
+      text-decoration:none;
+    }
+
+    main{
+      display:flex;
+      gap:20px;
+      margin-top:20px;
+    }
+
+    article{
+      flex:2;
+      background:white;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    aside{
+      flex:1;
+      background:#e0f2fe;
+      padding:20px;
+      border-radius:10px;
+    }
+
+    footer{
+      margin-top:20px;
+      background:#1e293b;
+      color:white;
+      padding:20px;
+      text-align:center;
+      border-radius:10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Day 4: Forms Deep Dive & Semantic HTML</h1>
+
+  <!-- FORMS -->
+  <div class="section">
+
+    <h2>1. Forms Deep Dive</h2>
+
+    <p>
+      Forms collect user data using different input elements.
+    </p>
+
+    <div class="example">
+
+      <form>
+
+        <label>Full Name</label>
+        <input 
+          type="text"
+          placeholder="Enter your name"
+        >
+
+        <label>Email</label>
+        <input 
+          type="email"
+          placeholder="Enter your email"
+        >
+
+        <label>Password</label>
+        <input 
+          type="password"
+          placeholder="Enter password"
+        >
+
+        <label>Age</label>
+        <input 
+          type="number"
+          placeholder="Enter your age"
+        >
+
+        <label>Date of Birth</label>
+        <input type="date">
+
+        <label>Upload File</label>
+        <input type="file">
+
+        <label>Favorite Color</label>
+        <input type="color">
+
+        <label>Country</label>
+
+        <select>
+
+          <option>Nigeria</option>
+          <option>Ghana</option>
+          <option>Kenya</option>
+
+        </select>
+
+        <label>Gender</label>
+
+        <div class="inline">
+
+          <label>
+            <input type="radio" name="gender">
+            Male
+          </label>
+
+          <label>
+            <input type="radio" name="gender">
+            Female
+          </label>
+
+        </div>
+
+        <label>Skills</label>
+
+        <div class="inline">
+
+          <label>
+            <input type="checkbox">
+            HTML
+          </label>
+
+          <label>
+            <input type="checkbox">
+            CSS
+          </label>
+
+          <label>
+            <input type="checkbox">
+            JavaScript
+          </label>
+
+        </div>
+
+        <label>Message</label>
+
+        <textarea 
+          rows="5"
+          placeholder="Write your message..."
+        ></textarea>
+
+        <button type="submit">
+          Submit Form
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- FORM ATTRIBUTES -->
+  <div class="section">
+
+    <h2>2. Important Form Attributes</h2>
+
+    <div class="example">
+
+      <ul style="margin-left:20px;">
+
+        <li>
+          <code>placeholder</code> → hint text
+        </li>
+
+        <li>
+          <code>required</code> → makes field compulsory
+        </li>
+
+        <li>
+          <code>type</code> → defines input type
+        </li>
+
+        <li>
+          <code>name</code> → identifies form data
+        </li>
+
+        <li>
+          <code>value</code> → default value
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <!-- SEMANTIC HTML -->
+  <div class="section">
+
+    <h2>3. Semantic HTML</h2>
+
+    <p>
+      Semantic HTML uses meaningful tags to describe webpage structure.
+    </p>
+
+    <div class="example">
+
+      <header>
+
+        <h2>My Website</h2>
+
+        <nav>
+
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+
+        </nav>
+
+      </header>
+
+      <main>
+
+        <article>
+
+          <h2>Article Title</h2>
+
+          <p>
+            This is the main article content.
+          </p>
+
+        </article>
+
+        <aside>
+
+          <h3>Sidebar</h3>
+
+          <p>
+            Extra information goes here.
+          </p>
+
+        </aside>
+
+      </main>
+
+      <footer>
+
+        <p>
+          Copyright 2026
+        </p>
+
+      </footer>
+
+    </div>
+
+  </div>
+
+  <!-- SEMANTIC TAGS -->
+  <div class="section">
+
+    <h2>4. Common Semantic Tags</h2>
+
+    <div class="example">
+
+      <ul style="margin-left:20px;">
+
+        <li><code>&lt;header&gt;</code> → top section</li>
+
+        <li><code>&lt;nav&gt;</code> → navigation links</li>
+
+        <li><code>&lt;main&gt;</code> → main content</li>
+
+        <li><code>&lt;section&gt;</code> → grouped content</li>
+
+        <li><code>&lt;article&gt;</code> → standalone content</li>
+
+        <li><code>&lt;aside&gt;</code> → sidebar content</li>
+
+        <li><code>&lt;footer&gt;</code> → bottom section</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
