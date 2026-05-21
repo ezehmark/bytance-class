@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animations & Transitions</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#f4f6f9;
+      padding:30px;
+      line-height:1.6;
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:40px;
+      color:#1e3a8a;
+    }
+
+    h2{
+      color:#2563eb;
+      margin-bottom:15px;
+    }
+
+    .section{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      margin-bottom:30px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .example{
+      margin-top:20px;
+      padding:20px;
+      background:#f8fbff;
+      border-radius:10px;
+      border:1px solid #dbeafe;
+    }
+
+    .box{
+      width:120px;
+      height:120px;
+      background:#2563eb;
+      border-radius:10px;
+      margin-top:15px;
+    }
+
+    /* =====================
+       TRANSITIONS
+    ===================== */
+
+    .transition-box{
+      transition: background 1s;
+    }
+
+    .transition-box:hover{
+      background:red;
+    }
+
+    .grow-box{
+      transition: width 0.5s;
+    }
+
+    .grow-box:hover{
+      width:250px;
+    }
+
+    .rotate-box{
+      transition: transform 0.5s;
+    }
+
+    .rotate-box:hover{
+      transform:rotate(45deg);
+    }
+
+    .scale-box{
+      transition: transform 0.5s;
+    }
+
+    .scale-box:hover{
+      transform:scale(1.2);
+    }
+
+    /* =====================
+       ANIMATIONS
+    ===================== */
+
+    @keyframes moveRight{
+
+      0%{
+        transform:translateX(0)
+      }
+    
+
+    100%{
+        transform:translateX(300px);
+      }
+
+    }
+
+    .move-box{
+      animation:moveRight 2s;
+    }
+
+    @keyframes bounce{
+
+      0%{
+        transform:translateY(0);
+      }
+
+      50%{
+        transform:translateY(-80px);
+      }
+
+      100%{
+        transform:translateY(0);
+      }
+
+    }
+
+    .bounce-box{
+      animation:bounce 1s infinite;
+    }
+
+    @keyframes spin{
+
+      from{
+        transform:rotate(0deg);
+      }
+
+      to{
+        transform:rotate(360deg);
+      }
+
+    }
+
+    .spin-box{
+      animation:spin 2s linear infinite;
+    }
+
+    @keyframes colorChange{
+
+      0%{
+        background:blue;
+      }
+
+      50%{
+        background:red;
+      }
+
+      100%{
+        background:green;
+      }
+
+    }
+
+    .color-box{
+      animation:colorChange 3s infinite;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h1>CSS Animations & Transitions</h1>
+
+  <!-- TRANSITIONS -->
+  <div class="section">
+
+    <h2>1. CSS Transitions</h2>
+
+    <p>
+      Transitions create smooth changes when a property changes.
+    </p>
+
+    <div class="example">
+
+      <h3>Background Transition</h3>
+
+      <div class="box transition-box"></div>
+
+      <p>Hover the box</p>
+
+      <br><br>
+
+      <h3>Width Transition</h3>
+
+      <div class="box grow-box"></div>
+
+      <p>Hover the box</p>
+
+      <br><br>
+
+      <h3>Rotate Transition</h3>
+
+      <div class="box rotate-box"></div>
+
+      <p>Hover the box</p>
+
+      <br><br>
+
+      <h3>Scale Transition</h3>
+
+      <div class="box scale-box"></div>
+
+      <p>Hover the box</p>
+
+    </div>
+
+  </div>
+
+  <!-- ANIMATIONS -->
+  <div class="section">
+
+    <h2>2. CSS Animations</h2>
+
+    <p>
+      Animations automatically change styles over time.
+    </p>
+
+    <div class="example">
+
+      <h3>Move Right Animation</h3>
+
+      <div class="box move-box"></div>
+
+      <br><br>
+
+      <h3>Bounce Animation</h3>
+
+      <div class="box bounce-box"></div>
+
+      <br><br>
+
+      <h3>Spin Animation</h3>
+
+      <div class="box spin-box"></div>
+
+      <br><br>
+
+      <h3>Color Change Animation</h3>
+
+      <div class="box color-box"></div>
+
+    </div>
+
+  </div>
+
+  <!-- EXPLANATION -->
+  <div class="section">
+
+    <h2>3. Important Concepts</h2>
+
+    <div class="example">
+
+      <h3>Transition Syntax</h3>
+
+      <pre>
+transition: property duration timing-function delay;
+      </pre>
+
+      <br>
+
+      <h3>Animation Syntax</h3>
+
+      <pre>
+animation: name duration timing-function iteration-count;
+      </pre>
+
+      <br>
+
+      <h3>@keyframes</h3>
+
+      <p>
+        @keyframes defines animation stages.
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+# 📘 Responsive Design (Media Queries)
+
+---
+
+## 1. Introduction to Responsive Design
+
+Responsive design ensures websites adapt to different screen sizes (mobile, tablet, desktop).
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: Arial; }
+</style>
+</head>
+<body>
+<h1>Responsive Page</h1>
+</body>
+</html>
+```
+
+---
+
+## 2. Media Query Basics
+
+Media queries apply styles based on screen size.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { background: lightblue; }
+
+@media (max-width: 600px) {
+  body { background: lightcoral; }
+}
+</style>
+</head>
+<body></body>
+</html>
+```
+
+---
+
+## 3. Breakpoints
+
+Breakpoints define where layout changes.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box { width: 100%; background: blue; }
+
+@media (min-width: 768px) {
+  .box { background: green; }
+}
+</style>
+</head>
+<body>
+<div class="box">Resize me</div>
+</body>
+</html>
+```
+
+---
+
+## 4. Mobile First Design
+
+Start designing for small screens, then scale up.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box { background: red; }
+
+@media (min-width: 768px) {
+  .box { background: blue; }
+}
+</style>
+</head>
+<body>
+<div class="box">Mobile First</div>
+</body>
+</html>
+```
+
+---
+
+## 5. max-width vs min-width
+
+* `max-width` → applies to smaller screens
+* `min-width` → applies to larger screens
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { background: yellow; }
+
+@media (max-width: 600px) {
+  body { background: pink; }
+}
+
+@media (min-width: 800px) {
+  body { background: lightgreen; }
+}
+</style>
+</head>
+<body></body>
+</html>
+```
+
+---
+
+## 6. Responsive Typography
+
+Adjust font sizes for different devices.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 { font-size: 20px; }
+
+@media (min-width: 768px) {
+  h1 { font-size: 40px; }
+}
+</style>
+</head>
+<body>
+<h1>Responsive Text</h1>
+</body>
+</html>
+```
+
+---
+
+## 7. Responsive Layout with Flexbox
+
+Change layout direction based on screen size.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.box {
+  padding: 20px;
+  background: lightblue;
+  margin: 5px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="box">1</div>
+  <div class="box">2</div>
+</div>
+</body>
+</html>
+```
+
+---
+
+## 8. Responsive Grid Layout
+
+Use Grid and adjust columns responsively.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.box {
+  background: orange;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="box">1</div>
+  <div class="box">2</div>
+</div>
+</body>
+</html>
+```
+
+---
+
+## 9. Hiding Elements Responsively
+
+Show/hide content based on device size.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mobile { display: block; }
+.desktop { display: none; }
+
+@media (min-width: 768px) {
+  .mobile { display: none; }
+  .desktop { display: block; }
+}
+</style>
+</head>
+<body>
+<div class="mobile">Mobile View</div>
+<div class="desktop">Desktop View</div>
+</body>
+</html>
+```
+
+---
+
+## 10. Responsive Images
+
+Make images scale with screen size.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+</head>
+<body>
+<img src="https://via.placeholder.com/600">
+</body>
+</html>
+```
+
+---
+
+# 🎯 Summary
+
+* Media queries control layout based on screen size
+* `min-width` = mobile-first scaling up
+* `max-width` = desktop-first scaling down
+* Combine with Flexbox/Grid for powerful layouts
+* Use responsive units and images for full adaptability

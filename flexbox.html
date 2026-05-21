@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title style="font-size: 10px;">Day 8 - Flexbox Practical Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f6f8;
+    }
+    h1, h2 {
+      margin-top: 30px;
+    }
+    .section {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+    .flex {
+      display: flex;
+      background: #e3ecff;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+    .box {
+      background: #4a90e2;
+      color: white;
+      padding: 20px;
+      margin: 5px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+   
+.container {
+  display: flex;
+  height: 100px;
+}
+
+.a {
+  flex-grow: 1;
+  background: lightblue;
+}
+
+.b {
+  flex-grow: 1;
+  background: lightcoral;
+}
+
+  </style>
+</head>
+<body>
+
+<h1>Day 8: Flexbox (Full Practical Examples)</h1>
+
+<div class="section">
+  <h2>1. Basic Flex Row</h2>
+  <div class="flex">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>2. justify-content: center</h2>
+  <div class="flex" style="justify-content: center;">
+    <div class="box">1</div>
+    <div class="box">2</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>3. justify-content: space-between</h2>
+  <div class="flex" style="justify-content: space-between;">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>4. align-items: center</h2>
+  <div class="flex" style="height: 150px; align-items: center;">
+    <div class="box">A</div>
+    <div class="box">B</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>5. flex-direction: column</h2>
+  <div class="flex" style="flex-direction: column;">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>6. gap</h2>
+  <div class="flex" style="gap: 20px;">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>7. flex-grow</h2>
+  <div class="flex">
+    <div class="box" style="flex:2">1</div>
+    <div class="box" style="flex-grow:1">2</div>
+  </div>
+</div>
+
+
+
+
+<div class="section">
+  <h2>9. Centering (Perfect Center)</h2>
+  <div class="flex" style="height:200px;justify-content:center; align-items: center">
+    <div class="box" style="width:50px;height:30px">Centered</div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
+

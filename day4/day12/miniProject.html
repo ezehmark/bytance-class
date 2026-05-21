@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BytanceTech Mini Project</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f7fb;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      background:#0f172a;
+      color:white;
+      padding:20px;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    nav h1{
+      font-size:28px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    .hero{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      padding:80px 20px;
+      background:linear-gradient(to right,#1e293b,#0ea5e9);
+      color:white;
+    }
+
+    .hero h2{
+      font-size:50px;
+      margin-bottom:20px;
+      animation:slideDown 1s ease;
+    }
+
+    .hero p{
+      max-width:700px;
+      margin-bottom:25px;
+    }
+
+    .hero button{
+      padding:12px 25px;
+      border:none;
+      background:white;
+      color:#0f172a;
+      font-weight:bold;
+      border-radius:8px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .hero button:hover{
+      transform:scale(1.05);
+      background:#dbeafe;
+    }
+
+    section{
+      padding:60px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:40px;
+      font-size:35px;
+      color:#0f172a;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card img{
+      width:100%;
+      border-radius:10px;
+      margin-bottom:15px;
+    }
+
+    .table-section{
+      overflow-x:auto;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      background:white;
+    }
+
+    table th,
+    table td{
+      border:1px solid #ddd;
+      padding:15px;
+      text-align:center;
+    }
+
+    table th{
+      background:#0ea5e9;
+      color:white;
+    }
+
+    .contact-container{
+      display:flex;
+      gap:30px;
+      flex-wrap:wrap;
+    }
+
+    form{
+      flex:1;
+      background:white;
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    form input,
+    form textarea,
+    form select{
+      width:100%;
+      padding:12px;
+      margin:10px 0;
+      border:1px solid #ccc;
+      border-radius:6px;
+    }
+
+    form button{
+      width:100%;
+      padding:12px;
+      border:none;
+      background:#0ea5e9;
+      color:white;
+      border-radius:6px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    form button:hover{
+      background:#0284c7;
+    }
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    @keyframes slideDown{
+      from{
+        opacity:0;
+        transform:translateY(-50px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:900px){
+      .features{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:600px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .hero h2{
+        font-size:35px;
+      }
+
+      .features{
+        grid-template-columns:1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <h1>BytanceTech</h1>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>Frontend Development Bootcamp</h2>
+
+    <p>
+      Learn HTML, CSS, Flexbox, Grid, Responsive Design,
+      Animations, and JavaScript from beginner to advanced level.
+    </p>
+
+    <button>Get Started</button>
+  </section>
+
+  <!-- FEATURES -->
+  <section>
+    <h2 class="section-title">What You Will Learn</h2>
+
+    <div class="features">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="HTML">
+
+        <h3>HTML5</h3>
+
+        <p>
+          Learn semantic HTML, forms, tables, images,
+          lists, and webpage structure.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?q=80&w=1200&auto=format&fit=crop" alt="CSS">
+
+        <h3>CSS3</h3>
+
+        <p>
+          Master colors, selectors, spacing,
+          flexbox, grid, transitions, and animations.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Responsive">
+
+        <h3>Responsive Design</h3>
+
+        <p>
+          Build websites that work perfectly
+          on desktop, tablet, and mobile devices.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TABLE -->
+  <section class="table-section">
+    <h2 class="section-title">Weekly Schedule</h2>
+
+    <table>
+      <tr>
+        <th>Week</th>
+        <th>Topic</th>
+        <th>Project</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>HTML Fundamentals</td>
+        <td>Portfolio Page</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>CSS Styling</td>
+        <td>Landing Page</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>Responsive Design</td>
+        <td>Responsive Website</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section>
+    <h2 class="section-title">Register Now</h2>
+
+    <div class="contact-container">
+
+      <form>
+
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name">
+
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Select Course</label>
+
+        <select>
+          <option>HTML & CSS</option>
+          <option>JavaScript</option>
+          <option>Frontend Bootcamp</option>
+        </select>
+
+        <label>Message</label>
+
+        <textarea rows="5" placeholder="Write your message"></textarea>
+
+        <button type="submit">Submit Registration</button>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      &copy; 2026 BytanceTech Frontend Bootcamp.
+      All Rights Reserved.
+    </p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Portfolio Project</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f4f4;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      background:#1e3a8a;
+      color:white;
+      padding:20px;
+      text-align:center;
+    }
+
+    nav{
+      background:#111827;
+      padding:15px;
+      text-align:center;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+    }
+
+    nav a:hover{
+      color:#fbbf24;
+    }
+
+    section{
+      background:white;
+      margin:20px;
+      padding:20px;
+      border-radius:10px;
+    }
+
+    h2{
+      margin-bottom:10px;
+      color:#1e3a8a;
+    }
+
+    img{
+      width:200px;
+      border-radius:10px;
+      margin-top:10px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:15px;
+    }
+
+    table, th, td{
+      border:1px solid #ccc;
+    }
+
+    th{
+      background:#1e3a8a;
+      color:white;
+    }
+
+    th, td{
+      padding:12px;
+      text-align:center;
+    }
+
+    form{
+      margin-top:20px;
+    }
+
+    input,
+    select,
+    textarea{
+      width:100%;
+      padding:10px;
+      margin-top:8px;
+      margin-bottom:15px;
+      border:1px solid #ccc;
+      border-radius:5px;
+    }
+
+    button{
+      background:#1e3a8a;
+      color:white;
+      border:none;
+      padding:12px 20px;
+      border-radius:5px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#162d66;
+    }
+
+    footer{
+      background:#111827;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>My Student Portfolio</h1>
+    <p>HTML Mini Project Practice</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+
+    <p>
+      Hello! My name is Mark. I am learning Frontend Development.
+      I enjoy building websites and learning new technologies.
+    </p>
+
+    <p>
+      This project contains headings, paragraphs, images, tables,
+      lists, forms, and semantic HTML elements.
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400" alt="Student Image">
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <h2>My Skills</h2>
+
+    <h3>Programming Skills</h3>
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <h3>Learning Goals</h3>
+
+    <ol>
+      <li>Build responsive websites</li>
+      <li>Learn JavaScript deeply</li>
+      <li>Become a Frontend Developer</li>
+    </ol>
+  </section>
+
+  <!-- TABLE SECTION -->
+  <section id="schedule">
+    <h2>Weekly Learning Schedule</h2>
+
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Topic</th>
+        <th>Duration</th>
+      </tr>
+
+      <tr>
+        <td>Monday</td>
+        <td>HTML</td>
+        <td>2 Hours</td>
+      </tr>
+
+      <tr>
+        <td>Tuesday</td>
+        <td>CSS</td>
+        <td>2 Hours</td>
+      </tr>
+
+      <tr>
+        <td>Wednesday</td>
+        <td>JavaScript</td>
+        <td>3 Hours</td>
+      </tr>
+
+      <tr>
+        <td>Thursday</td>
+        <td>Practice Projects</td>
+        <td>4 Hours</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <form>
+
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name">
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email">
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter password">
+
+      <label>Gender</label>
+      <select>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+
+      <label>Message</label>
+      <textarea rows="5" placeholder="Write your message"></textarea>
+
+      <label>
+        <input type="checkbox">
+        Subscribe to newsletter
+      </label>
+
+      <br><br>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Student Portfolio Project | Built with HTML & CSS</p>
+  </footer>
+
+</body>
+</html>
